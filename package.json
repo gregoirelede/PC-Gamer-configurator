@@ -1,0 +1,26 @@
+{
+  "name": "pc-gamer-configurator",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Configurateur de PC Gamer — optimisation qualité/prix par budget, compatibilité vérifiée, suivi des prix et bons plans.",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "typescript": "^5.5.4",
+    "vite": "^5.4.0",
+    "vitest": "^2.0.5"
+  }
+}
