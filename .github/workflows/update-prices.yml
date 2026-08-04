@@ -1,0 +1,37 @@
+name: Mise à jour des prix
+
+on:
+  schedule:
+    - cron: "23 6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - name: Regénérer public/prices.json
+        run: npm run update-prices
+        env:
+          # Clés des fournisseurs de prix personnalisés (scripts/providers.ts),
+          # à déclarer dans Settings → Secrets and variables → Actions.
+          AWIN_API_KEY: ${{ secrets.AWIN_API_KEY }}
+      - name: Commiter si les prix ont changé
+        run: |
+          if ! git diff --quiet -- public/prices.json; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add public/prices.json
+            git commit -m "chore: mise à jour quotidienne des prix"
+            git push
+          else
+            echo "Aucun changement de prix."
+          fi

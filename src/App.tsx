@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { ALL_COMPONENTS, PRICES_UPDATED_AT } from "./data/components";
+import { applyRemotePrices, loadRemotePrices, remotePricesInfo } from "./prices/remote";
 import AutoBuilder from "./ui/AutoBuilder";
 import CompareView from "./ui/CompareView";
 import DealsView from "./ui/DealsView";
@@ -16,6 +17,17 @@ const TABS: Array<{ id: Tab; label: string }> = [
 
 export default function App() {
   const [tab, setTab] = useState<Tab>("auto");
+  const [pricesReady, setPricesReady] = useState(false);
+
+  // Les prix distants doivent être appliqués avant le premier rendu des vues
+  // (l'optimiseur et les bons plans lisent les prix au moment de l'appel).
+  useEffect(() => {
+    loadRemotePrices()
+      .then((data) => {
+        if (data) applyRemotePrices(data);
+      })
+      .finally(() => setPricesReady(true));
+  }, []);
 
   return (
     <div>
@@ -41,16 +53,20 @@ export default function App() {
       </header>
 
       <main>
-        {tab === "auto" && <AutoBuilder />}
-        {tab === "manual" && <ManualBuilder />}
-        {tab === "deals" && <DealsView />}
-        {tab === "compare" && <CompareView />}
+        {pricesReady && (
+          <>
+            {tab === "auto" && <AutoBuilder />}
+            {tab === "manual" && <ManualBuilder />}
+            {tab === "deals" && <DealsView />}
+            {tab === "compare" && <CompareView />}
+          </>
+        )}
       </main>
 
       <footer className="footer">
-        {ALL_COMPONENTS.length} composants référencés · Prix indicatifs (référence {PRICES_UPDATED_AT}),
-        relevés chez les grands marchands sécurisés — brancher une source réelle via{" "}
-        <code>src/prices/provider.ts</code>.
+        {ALL_COMPONENTS.length} composants référencés · Prix indicatifs mis à jour le{" "}
+        {remotePricesInfo()?.updatedAt ?? PRICES_UPDATED_AT} (regénérés chaque jour par GitHub
+        Actions) — sources supplémentaires branchables via <code>scripts/providers.ts</code>.
         <br />
         Les FPS affichés sont des moyennes estimées en jeu AAA (qualité ultra) issues de benchmarks
         agrégés publics : ils varient selon les titres.

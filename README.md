@@ -45,23 +45,37 @@ pour les GPU qui l'exigent.
 
 ```bash
 npm install
-npm run dev        # serveur de développement
-npm run build      # build de production (vérifie aussi les types)
-npm test           # tests du moteur (Vitest)
+npm run dev            # serveur de développement
+npm run build          # build de production (vérifie aussi les types)
+npm test               # tests du moteur (Vitest)
+npm run update-prices  # regénère public/prices.json (prix + historique)
 ```
 
-## Prix : fonctionnement et limites
+## Déploiement (GitHub Pages)
 
-Les prix embarqués (`src/data/components.ts`) sont des **références
-indicatives en euros** relevées chez les grands marchands sécurisés, datées
-(`PRICES_UPDATED_AT`). La moyenne 90 jours alimente la détection de bons plans.
+Le workflow `.github/workflows/deploy.yml` construit et déploie le site sur
+GitHub Pages à chaque push sur `main` (plus un redéploiement quotidien à
+07:00 UTC pour embarquer les prix frais). Au premier lancement, il active
+Pages automatiquement ; si cela échoue, activez **Settings → Pages →
+Source : GitHub Actions** puis relancez le workflow. Le site est alors servi
+sur `https://<utilisateur>.github.io/PC-Gamer-configurator/`.
 
-Pour des prix réellement à jour, implémentez l'interface `PriceProvider`
-(`src/prices/provider.ts`) avec une source légitime :
+## Pipeline de prix
 
-- flux d'affiliation officiels des marchands (Amazon PA-API, Awin, etc.) ;
-- un backend d'agrégation maison ;
-- un fichier JSON regénéré périodiquement par une GitHub Action.
+1. **`scripts/update-prices.ts`** (lancé chaque jour à 06:23 UTC par
+   `.github/workflows/update-prices.yml`, ou à la main via
+   `npm run update-prices`) regénère `public/prices.json` : prix courants,
+   historique de relevés quotidiens (fenêtre 120 jours) et moyennes 90 jours
+   recalculées dès que l'historique compte assez de relevés.
+2. **L'application charge `prices.json` au démarrage** et applique les prix
+   sur la base embarquée : l'optimiseur, les bons plans et les graphiques
+   utilisent alors les valeurs fraîches (avec repli silencieux sur les prix
+   embarqués si le fichier est absent).
+3. **Sources réelles** : ajoutez vos intégrations dans
+   `scripts/providers.ts` (interface `PriceProvider`) — API d'affiliation
+   officielles (Amazon PA-API, Awin…), agrégateur ou backend maison — avec
+   vos clés déclarées en secrets GitHub Actions. Chaque cotation retournée
+   écrase le prix de référence ; les fournisseurs en échec sont ignorés.
 
 Le scraping direct des sites marchands n'est volontairement pas implémenté :
 il est peu fiable (protections anti-bot) et contraire aux CGU de la plupart
@@ -72,14 +86,25 @@ des enseignes.
 ```
 src/
 ├── types.ts               # Modèle de données (composants, build, profils)
-├── data/components.ts     # Base de ~95 composants avec specs et prix
+├── data/components.ts     # Base de 85 composants avec specs et prix
 ├── engine/
 │   ├── compatibility.ts   # Règles de compatibilité (erreurs + avertissements)
 │   ├── optimizer.ts       # Budget → meilleure configuration + alternatives
-│   ├── deals.ts           # Détection de bons plans, historiques de prix
+│   ├── deals.ts           # Détection de bons plans, séries de démonstration
 │   └── engine.test.ts     # Tests Vitest du moteur
-├── prices/provider.ts     # Interface PriceProvider (sources de prix branchables)
-└── ui/                    # Interface React (Auto, Manuel, Bons plans, Comparer)
+├── prices/
+│   ├── provider.ts        # Interface PriceProvider (sources branchables)
+│   ├── history.ts         # Fusion d'historique + moyenne 90 jours (testé)
+│   └── remote.ts          # Chargement/application de public/prices.json
+├── ui/                    # Interface React (Auto, Manuel, Bons plans, Comparer)
+scripts/
+├── update-prices.ts       # Regénère public/prices.json (Action quotidienne)
+└── providers.ts           # Vos fournisseurs de prix personnalisés
+public/prices.json         # Prix courants + historique (commité par le bot)
+.github/workflows/
+├── ci.yml                 # Build + tests sur chaque push
+├── deploy.yml             # Déploiement GitHub Pages (push main + quotidien)
+└── update-prices.yml      # Mise à jour quotidienne des prix (06:23 UTC)
 ```
 
 Application web statique (React + TypeScript + Vite) : aucune infrastructure
