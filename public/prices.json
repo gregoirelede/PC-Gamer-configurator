@@ -1,0 +1,946 @@
+{
+ "updatedAt": "2026-08-04",
+ "sources": [
+  "référence"
+ ],
+ "quotes": [
+  {
+   "id": "cpu-r5-5500",
+   "price": 79,
+   "vendor": "référence"
+  },
+  {
+   "id": "cpu-r5-5600",
+   "price": 105,
+   "vendor": "référence"
+  },
+  {
+   "id": "cpu-r7-5700x3d",
+   "price": 199,
+   "vendor": "référence"
+  },
+  {
+   "id": "cpu-r5-7500f",
+   "price": 149,
+   "vendor": "référence"
+  },
+  {
+   "id": "cpu-r5-7600",
+   "price": 189,
+   "vendor": "référence"
+  },
+  {
+   "id": "cpu-r5-9600x",
+   "price": 229,
+   "vendor": "référence"
+  },
+  {
+   "id": "cpu-r7-7700",
+   "price": 259,
+   "vendor": "référence"
+  },
+  {
+   "id": "cpu-r7-7800x3d",
+   "price": 339,
+   "vendor": "référence"
+  },
+  {
+   "id": "cpu-r7-9700x",
+   "price": 299,
+   "vendor": "référence"
+  },
+  {
+   "id": "cpu-r7-9800x3d",
+   "price": 479,
+   "vendor": "référence"
+  },
+  {
+   "id": "cpu-r9-9900x",
+   "price": 399,
+   "vendor": "référence"
+  },
+  {
+   "id": "cpu-r9-9950x3d",
+   "price": 699,
+   "vendor": "référence"
+  },
+  {
+   "id": "cpu-i3-12100f",
+   "price": 82,
+   "vendor": "référence"
+  },
+  {
+   "id": "cpu-i5-12400f",
+   "price": 109,
+   "vendor": "référence"
+  },
+  {
+   "id": "cpu-i5-13400f",
+   "price": 159,
+   "vendor": "référence"
+  },
+  {
+   "id": "cpu-i5-14600kf",
+   "price": 225,
+   "vendor": "référence"
+  },
+  {
+   "id": "cpu-i7-14700kf",
+   "price": 329,
+   "vendor": "référence"
+  },
+  {
+   "id": "cpu-cu7-265k",
+   "price": 329,
+   "vendor": "référence"
+  },
+  {
+   "id": "gpu-rx6600",
+   "price": 189,
+   "vendor": "référence"
+  },
+  {
+   "id": "gpu-rtx3060",
+   "price": 249,
+   "vendor": "référence"
+  },
+  {
+   "id": "gpu-rx7600",
+   "price": 269,
+   "vendor": "référence"
+  },
+  {
+   "id": "gpu-b580",
+   "price": 269,
+   "vendor": "référence"
+  },
+  {
+   "id": "gpu-rtx4060",
+   "price": 289,
+   "vendor": "référence"
+  },
+  {
+   "id": "gpu-rtx5060",
+   "price": 319,
+   "vendor": "référence"
+  },
+  {
+   "id": "gpu-rx9060xt",
+   "price": 359,
+   "vendor": "référence"
+  },
+  {
+   "id": "gpu-rtx5060ti",
+   "price": 449,
+   "vendor": "référence"
+  },
+  {
+   "id": "gpu-rx7800xt",
+   "price": 479,
+   "vendor": "référence"
+  },
+  {
+   "id": "gpu-rtx5070",
+   "price": 579,
+   "vendor": "référence"
+  },
+  {
+   "id": "gpu-rx9070",
+   "price": 629,
+   "vendor": "référence"
+  },
+  {
+   "id": "gpu-rx9070xt",
+   "price": 729,
+   "vendor": "référence"
+  },
+  {
+   "id": "gpu-rtx5070ti",
+   "price": 799,
+   "vendor": "référence"
+  },
+  {
+   "id": "gpu-rx7900xtx",
+   "price": 899,
+   "vendor": "référence"
+  },
+  {
+   "id": "gpu-rtx5080",
+   "price": 1099,
+   "vendor": "référence"
+  },
+  {
+   "id": "gpu-rtx5090",
+   "price": 2299,
+   "vendor": "référence"
+  },
+  {
+   "id": "mb-b550m-ds3h",
+   "price": 89,
+   "vendor": "référence"
+  },
+  {
+   "id": "mb-b550-tomahawk",
+   "price": 129,
+   "vendor": "référence"
+  },
+  {
+   "id": "mb-b650m-p",
+   "price": 109,
+   "vendor": "référence"
+  },
+  {
+   "id": "mb-b650-gaming-x",
+   "price": 149,
+   "vendor": "référence"
+  },
+  {
+   "id": "mb-b850-gaming-plus",
+   "price": 189,
+   "vendor": "référence"
+  },
+  {
+   "id": "mb-x870-strix",
+   "price": 319,
+   "vendor": "référence"
+  },
+  {
+   "id": "mb-b760m-p-ddr4",
+   "price": 99,
+   "vendor": "référence"
+  },
+  {
+   "id": "mb-b760-gaming-x",
+   "price": 139,
+   "vendor": "référence"
+  },
+  {
+   "id": "mb-z790-ud",
+   "price": 209,
+   "vendor": "référence"
+  },
+  {
+   "id": "mb-b860m-a",
+   "price": 159,
+   "vendor": "référence"
+  },
+  {
+   "id": "mb-b860-tuf",
+   "price": 199,
+   "vendor": "référence"
+  },
+  {
+   "id": "mb-z890-tomahawk",
+   "price": 299,
+   "vendor": "référence"
+  },
+  {
+   "id": "ram-ddr4-16-3200",
+   "price": 35,
+   "vendor": "référence"
+  },
+  {
+   "id": "ram-ddr4-32-3600",
+   "price": 62,
+   "vendor": "référence"
+  },
+  {
+   "id": "ram-ddr5-16-5200",
+   "price": 49,
+   "vendor": "référence"
+  },
+  {
+   "id": "ram-ddr5-32-6000-cl36",
+   "price": 85,
+   "vendor": "référence"
+  },
+  {
+   "id": "ram-ddr5-32-6000-cl30",
+   "price": 95,
+   "vendor": "référence"
+  },
+  {
+   "id": "ram-ddr5-48-6000",
+   "price": 139,
+   "vendor": "référence"
+  },
+  {
+   "id": "ram-ddr5-64-6000",
+   "price": 179,
+   "vendor": "référence"
+  },
+  {
+   "id": "ram-ddr5-32-7200",
+   "price": 129,
+   "vendor": "référence"
+  },
+  {
+   "id": "sto-p3plus-1",
+   "price": 59,
+   "vendor": "référence"
+  },
+  {
+   "id": "sto-nv3-1",
+   "price": 62,
+   "vendor": "référence"
+  },
+  {
+   "id": "sto-sn770-1",
+   "price": 69,
+   "vendor": "référence"
+  },
+  {
+   "id": "sto-990evo-1",
+   "price": 84,
+   "vendor": "référence"
+  },
+  {
+   "id": "sto-t500-2",
+   "price": 129,
+   "vendor": "référence"
+  },
+  {
+   "id": "sto-sn850x-2",
+   "price": 139,
+   "vendor": "référence"
+  },
+  {
+   "id": "sto-990pro-2",
+   "price": 159,
+   "vendor": "référence"
+  },
+  {
+   "id": "sto-t705-2",
+   "price": 239,
+   "vendor": "référence"
+  },
+  {
+   "id": "psu-a550bn",
+   "price": 49,
+   "vendor": "référence"
+  },
+  {
+   "id": "psu-cx650",
+   "price": 64,
+   "vendor": "référence"
+  },
+  {
+   "id": "psu-a650gl",
+   "price": 75,
+   "vendor": "référence"
+  },
+  {
+   "id": "psu-rm750e",
+   "price": 99,
+   "vendor": "référence"
+  },
+  {
+   "id": "psu-a850gl",
+   "price": 119,
+   "vendor": "référence"
+  },
+  {
+   "id": "psu-rm850x",
+   "price": 139,
+   "vendor": "référence"
+  },
+  {
+   "id": "psu-pp12m-1000",
+   "price": 149,
+   "vendor": "référence"
+  },
+  {
+   "id": "psu-rm1200x",
+   "price": 219,
+   "vendor": "référence"
+  },
+  {
+   "id": "case-forge100m",
+   "price": 54,
+   "vendor": "référence"
+  },
+  {
+   "id": "case-p30",
+   "price": 55,
+   "vendor": "référence"
+  },
+  {
+   "id": "case-air903max",
+   "price": 75,
+   "vendor": "référence"
+  },
+  {
+   "id": "case-lancool207",
+   "price": 85,
+   "vendor": "référence"
+  },
+  {
+   "id": "case-popair",
+   "price": 89,
+   "vendor": "référence"
+  },
+  {
+   "id": "case-h5flow",
+   "price": 94,
+   "vendor": "référence"
+  },
+  {
+   "id": "case-north",
+   "price": 139,
+   "vendor": "référence"
+  },
+  {
+   "id": "case-o11evo",
+   "price": 149,
+   "vendor": "référence"
+  },
+  {
+   "id": "cool-stock",
+   "price": 0,
+   "vendor": "référence"
+  },
+  {
+   "id": "cool-freezer36",
+   "price": 29,
+   "vendor": "référence"
+  },
+  {
+   "id": "cool-pa120se",
+   "price": 39,
+   "vendor": "référence"
+  },
+  {
+   "id": "cool-ps120evo",
+   "price": 49,
+   "vendor": "référence"
+  },
+  {
+   "id": "cool-drp5",
+   "price": 89,
+   "vendor": "référence"
+  },
+  {
+   "id": "cool-lf3-240",
+   "price": 79,
+   "vendor": "référence"
+  },
+  {
+   "id": "cool-lf3-360",
+   "price": 105,
+   "vendor": "référence"
+  }
+ ],
+ "history": {
+  "cpu-r5-5500": [
+   {
+    "d": "2026-08-04",
+    "p": 79
+   }
+  ],
+  "cpu-r5-5600": [
+   {
+    "d": "2026-08-04",
+    "p": 105
+   }
+  ],
+  "cpu-r7-5700x3d": [
+   {
+    "d": "2026-08-04",
+    "p": 199
+   }
+  ],
+  "cpu-r5-7500f": [
+   {
+    "d": "2026-08-04",
+    "p": 149
+   }
+  ],
+  "cpu-r5-7600": [
+   {
+    "d": "2026-08-04",
+    "p": 189
+   }
+  ],
+  "cpu-r5-9600x": [
+   {
+    "d": "2026-08-04",
+    "p": 229
+   }
+  ],
+  "cpu-r7-7700": [
+   {
+    "d": "2026-08-04",
+    "p": 259
+   }
+  ],
+  "cpu-r7-7800x3d": [
+   {
+    "d": "2026-08-04",
+    "p": 339
+   }
+  ],
+  "cpu-r7-9700x": [
+   {
+    "d": "2026-08-04",
+    "p": 299
+   }
+  ],
+  "cpu-r7-9800x3d": [
+   {
+    "d": "2026-08-04",
+    "p": 479
+   }
+  ],
+  "cpu-r9-9900x": [
+   {
+    "d": "2026-08-04",
+    "p": 399
+   }
+  ],
+  "cpu-r9-9950x3d": [
+   {
+    "d": "2026-08-04",
+    "p": 699
+   }
+  ],
+  "cpu-i3-12100f": [
+   {
+    "d": "2026-08-04",
+    "p": 82
+   }
+  ],
+  "cpu-i5-12400f": [
+   {
+    "d": "2026-08-04",
+    "p": 109
+   }
+  ],
+  "cpu-i5-13400f": [
+   {
+    "d": "2026-08-04",
+    "p": 159
+   }
+  ],
+  "cpu-i5-14600kf": [
+   {
+    "d": "2026-08-04",
+    "p": 225
+   }
+  ],
+  "cpu-i7-14700kf": [
+   {
+    "d": "2026-08-04",
+    "p": 329
+   }
+  ],
+  "cpu-cu7-265k": [
+   {
+    "d": "2026-08-04",
+    "p": 329
+   }
+  ],
+  "gpu-rx6600": [
+   {
+    "d": "2026-08-04",
+    "p": 189
+   }
+  ],
+  "gpu-rtx3060": [
+   {
+    "d": "2026-08-04",
+    "p": 249
+   }
+  ],
+  "gpu-rx7600": [
+   {
+    "d": "2026-08-04",
+    "p": 269
+   }
+  ],
+  "gpu-b580": [
+   {
+    "d": "2026-08-04",
+    "p": 269
+   }
+  ],
+  "gpu-rtx4060": [
+   {
+    "d": "2026-08-04",
+    "p": 289
+   }
+  ],
+  "gpu-rtx5060": [
+   {
+    "d": "2026-08-04",
+    "p": 319
+   }
+  ],
+  "gpu-rx9060xt": [
+   {
+    "d": "2026-08-04",
+    "p": 359
+   }
+  ],
+  "gpu-rtx5060ti": [
+   {
+    "d": "2026-08-04",
+    "p": 449
+   }
+  ],
+  "gpu-rx7800xt": [
+   {
+    "d": "2026-08-04",
+    "p": 479
+   }
+  ],
+  "gpu-rtx5070": [
+   {
+    "d": "2026-08-04",
+    "p": 579
+   }
+  ],
+  "gpu-rx9070": [
+   {
+    "d": "2026-08-04",
+    "p": 629
+   }
+  ],
+  "gpu-rx9070xt": [
+   {
+    "d": "2026-08-04",
+    "p": 729
+   }
+  ],
+  "gpu-rtx5070ti": [
+   {
+    "d": "2026-08-04",
+    "p": 799
+   }
+  ],
+  "gpu-rx7900xtx": [
+   {
+    "d": "2026-08-04",
+    "p": 899
+   }
+  ],
+  "gpu-rtx5080": [
+   {
+    "d": "2026-08-04",
+    "p": 1099
+   }
+  ],
+  "gpu-rtx5090": [
+   {
+    "d": "2026-08-04",
+    "p": 2299
+   }
+  ],
+  "mb-b550m-ds3h": [
+   {
+    "d": "2026-08-04",
+    "p": 89
+   }
+  ],
+  "mb-b550-tomahawk": [
+   {
+    "d": "2026-08-04",
+    "p": 129
+   }
+  ],
+  "mb-b650m-p": [
+   {
+    "d": "2026-08-04",
+    "p": 109
+   }
+  ],
+  "mb-b650-gaming-x": [
+   {
+    "d": "2026-08-04",
+    "p": 149
+   }
+  ],
+  "mb-b850-gaming-plus": [
+   {
+    "d": "2026-08-04",
+    "p": 189
+   }
+  ],
+  "mb-x870-strix": [
+   {
+    "d": "2026-08-04",
+    "p": 319
+   }
+  ],
+  "mb-b760m-p-ddr4": [
+   {
+    "d": "2026-08-04",
+    "p": 99
+   }
+  ],
+  "mb-b760-gaming-x": [
+   {
+    "d": "2026-08-04",
+    "p": 139
+   }
+  ],
+  "mb-z790-ud": [
+   {
+    "d": "2026-08-04",
+    "p": 209
+   }
+  ],
+  "mb-b860m-a": [
+   {
+    "d": "2026-08-04",
+    "p": 159
+   }
+  ],
+  "mb-b860-tuf": [
+   {
+    "d": "2026-08-04",
+    "p": 199
+   }
+  ],
+  "mb-z890-tomahawk": [
+   {
+    "d": "2026-08-04",
+    "p": 299
+   }
+  ],
+  "ram-ddr4-16-3200": [
+   {
+    "d": "2026-08-04",
+    "p": 35
+   }
+  ],
+  "ram-ddr4-32-3600": [
+   {
+    "d": "2026-08-04",
+    "p": 62
+   }
+  ],
+  "ram-ddr5-16-5200": [
+   {
+    "d": "2026-08-04",
+    "p": 49
+   }
+  ],
+  "ram-ddr5-32-6000-cl36": [
+   {
+    "d": "2026-08-04",
+    "p": 85
+   }
+  ],
+  "ram-ddr5-32-6000-cl30": [
+   {
+    "d": "2026-08-04",
+    "p": 95
+   }
+  ],
+  "ram-ddr5-48-6000": [
+   {
+    "d": "2026-08-04",
+    "p": 139
+   }
+  ],
+  "ram-ddr5-64-6000": [
+   {
+    "d": "2026-08-04",
+    "p": 179
+   }
+  ],
+  "ram-ddr5-32-7200": [
+   {
+    "d": "2026-08-04",
+    "p": 129
+   }
+  ],
+  "sto-p3plus-1": [
+   {
+    "d": "2026-08-04",
+    "p": 59
+   }
+  ],
+  "sto-nv3-1": [
+   {
+    "d": "2026-08-04",
+    "p": 62
+   }
+  ],
+  "sto-sn770-1": [
+   {
+    "d": "2026-08-04",
+    "p": 69
+   }
+  ],
+  "sto-990evo-1": [
+   {
+    "d": "2026-08-04",
+    "p": 84
+   }
+  ],
+  "sto-t500-2": [
+   {
+    "d": "2026-08-04",
+    "p": 129
+   }
+  ],
+  "sto-sn850x-2": [
+   {
+    "d": "2026-08-04",
+    "p": 139
+   }
+  ],
+  "sto-990pro-2": [
+   {
+    "d": "2026-08-04",
+    "p": 159
+   }
+  ],
+  "sto-t705-2": [
+   {
+    "d": "2026-08-04",
+    "p": 239
+   }
+  ],
+  "psu-a550bn": [
+   {
+    "d": "2026-08-04",
+    "p": 49
+   }
+  ],
+  "psu-cx650": [
+   {
+    "d": "2026-08-04",
+    "p": 64
+   }
+  ],
+  "psu-a650gl": [
+   {
+    "d": "2026-08-04",
+    "p": 75
+   }
+  ],
+  "psu-rm750e": [
+   {
+    "d": "2026-08-04",
+    "p": 99
+   }
+  ],
+  "psu-a850gl": [
+   {
+    "d": "2026-08-04",
+    "p": 119
+   }
+  ],
+  "psu-rm850x": [
+   {
+    "d": "2026-08-04",
+    "p": 139
+   }
+  ],
+  "psu-pp12m-1000": [
+   {
+    "d": "2026-08-04",
+    "p": 149
+   }
+  ],
+  "psu-rm1200x": [
+   {
+    "d": "2026-08-04",
+    "p": 219
+   }
+  ],
+  "case-forge100m": [
+   {
+    "d": "2026-08-04",
+    "p": 54
+   }
+  ],
+  "case-p30": [
+   {
+    "d": "2026-08-04",
+    "p": 55
+   }
+  ],
+  "case-air903max": [
+   {
+    "d": "2026-08-04",
+    "p": 75
+   }
+  ],
+  "case-lancool207": [
+   {
+    "d": "2026-08-04",
+    "p": 85
+   }
+  ],
+  "case-popair": [
+   {
+    "d": "2026-08-04",
+    "p": 89
+   }
+  ],
+  "case-h5flow": [
+   {
+    "d": "2026-08-04",
+    "p": 94
+   }
+  ],
+  "case-north": [
+   {
+    "d": "2026-08-04",
+    "p": 139
+   }
+  ],
+  "case-o11evo": [
+   {
+    "d": "2026-08-04",
+    "p": 149
+   }
+  ],
+  "cool-stock": [
+   {
+    "d": "2026-08-04",
+    "p": 0
+   }
+  ],
+  "cool-freezer36": [
+   {
+    "d": "2026-08-04",
+    "p": 29
+   }
+  ],
+  "cool-pa120se": [
+   {
+    "d": "2026-08-04",
+    "p": 39
+   }
+  ],
+  "cool-ps120evo": [
+   {
+    "d": "2026-08-04",
+    "p": 49
+   }
+  ],
+  "cool-drp5": [
+   {
+    "d": "2026-08-04",
+    "p": 89
+   }
+  ],
+  "cool-lf3-240": [
+   {
+    "d": "2026-08-04",
+    "p": 79
+   }
+  ],
+  "cool-lf3-360": [
+   {
+    "d": "2026-08-04",
+    "p": 105
+   }
+  ]
+ },
+ "avg90": {}
+}
